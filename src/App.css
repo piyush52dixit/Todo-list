@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+
+  /* border: 5px solid black; */
+  font-family: "Rubik", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  border: none;
+  background-color: transparent;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  max-width: 45rem;
+  margin: auto;
   min-height: 100vh;
+  /* border: 3px solid green; */
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.container h1 {
+  margin-bottom: 4rem;
+  letter-spacing: 0.002rem;
+  color: #343a40;
+  font-size: 3rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 450px) {
+  .container h1 {
+    gap: 0.3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .biceps {
+    height: 8rem;
+    width: 8rem;
+  }
+  .container::before {
+    position: absolute;
+
+    bottom: -10%;
+    right: -50%;
+    content: "";
+    z-index: -1;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #fff, #f3f0ff);
+    box-shadow: 0px 0px 10rem rgba(0, 0, 0, 0.11);
   }
 }
